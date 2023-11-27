@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <title>demothing</title>
+        {# <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon"> #}
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <img id="mockup" src="{{ url_for('static', filename='mockup.png') }}">
+        <div id="screen">
+            <div id="cover"></div>
+            <div id="header"><div>vSpeak</div></div>
+            <div id="bigpostcont">
+                <div id="bigpost">
+                    <div class="name">Sebastian Theiler</div>
+                    <img src="{{ url_for('static', filename='p2.jpg') }}" class="delay-1">
+                    <div class="audio-cont">
+                        <div class="audio delay-2">
+                            <button id="play1" class="play" onclick="transform(this)"></button>
+                            <div class="slider">
+                                <div class="slider-button"></div>
+                                <div class="slider-track"></div>
+                            </div>
+                            <div class="timestamp">
+                                <div class="timestamp-current">0:00</div>
+                                <div class="timestamp-div">/</div>
+                                <div class="timestamp-total">0:06</div>
+                            </div>
+                        </div>
+                        <div class="audio right">
+                            <button id="play2" class="play" onclick="transform(this)"></button>
+                            <div class="slider">
+                                <div class="slider-button"></div>
+                                <div class="slider-track"></div>
+                            </div>
+                            <div class="timestamp">
+                                <div class="timestamp-current">0:00</div>
+                                <div class="timestamp-div">/</div>
+                                <div class="timestamp-total">0:05</div>
+                            </div>
+                        </div>
+                        <div class="audio">
+                            <button id="play3" class="play" onclick="transform(this)"></button>
+                            <div class="slider">
+                                <div class="slider-button"></div>
+                                <div class="slider-track"></div>
+                            </div>
+                            <div class="timestamp">
+                                <div class="timestamp-current">0:00</div>
+                                <div class="timestamp-div">/</div>
+                                <div class="timestamp-total">0:03</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="postwall">
+                <img class="post" src="{{ url_for('static', filename='p1.jpg') }}">
+                <button id="thisone"><img class="post" src="{{ url_for('static', filename='p2.jpg') }}"></button>
+                <img class="post" src="{{ url_for('static', filename='p3.jpg') }}">
+                <img class="post" src="{{ url_for('static', filename='p4.jpg') }}">
+                <img class="post" src="{{ url_for('static', filename='p5.jpg') }}">
+                <img class="post" src="{{ url_for('static', filename='p6.jpg') }}">
+            </div>
+            <div id="footer">
+                <div class="icon"></div>
+                <div class="icon">󰍮</div>
+                <img class="icon" src="{{ url_for('static', filename='profile.jpg') }}">
+            </div>
+        </div>
+    </body>
+</html>

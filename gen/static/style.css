@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Sen&display=swap');
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('SpaceMonoNF.woff2') format('woff2'),
+        url('SpaceMonoNF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Sen', sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: #44ff00; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#screen {
+    margin: auto;
+    width: 360px;
+    height: 800px;
+    background: #ffffff;
+    border-radius: 5px;
+    /* box-shadow: #00000030 0px 0px 5px 5px; */
+}
+
+#postwall {
+    display: flex;
+    gap: 10px;
+    width: 340px;
+    height: 600px;
+    margin: 10px;
+    align-content: end;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+#postwall button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 77.5px;
+    border-radius: 5px;
+    width: 77.5px;
+    transition: 0.5s transform cubic-bezier(.26,.53,.74,1.48), 0.5s box-shadow cubic-bezier(.26,.53,.74,1.48);
+    transform: scale(1.0, 1.0);
+}
+
+#postwall .post {
+    border-radius: 5px;
+    height: 77.5px;
+    width: 77.5px;
+    background-color: #0000ff;
+    box-shadow: #00000020 0px 0px 10px 0px;
+}
+
+*:focus{
+    outline: none !important;
+}
+
+#postwall button:hover, #postwall button:focus {
+    transform: scale(1.1, 1.1);
+    box-shadow: #00000050 0px 0px 10px 3px;
+}
+
+#footer {
+    height: 60px;
+    display: flex;
+    box-shadow: #00000020 0px -5px 10px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer .icon {
+    font-family: "Space Mono";
+    width: 40px;
+    /* height: 40px; */
+    text-align: center;
+    font-size: 30px;
+    /* margin: 40px; */
+}
+
+#bigpostcont {
+    position: absolute;
+    margin: 20px;
+    width: 320px;
+    height: 800px;
+    z-index: 2;
+}
+
+#bigpost{
+    opacity: 0;
+    transform: scale(1.05, 1.05);
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 10px; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: 0.5s opacity cubic-bezier(.26,.53,.74,1.48), 0.5s transform cubic-bezier(.26,.53,.74,1.48);
+}
+
+#bigpost.pop{
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+}
+
+#bigpost,
+#bigpost img,
+#bigpost audio {
+    width: 320px;
+}
+
+#bigpost .name, #bigpost img, #bigpost audio{
+    border-radius: 5px;
+    box-shadow: #00000050 0px 0px 10px 0px;
+}
+
+#cover {
+    z-index: 2;
+    position: absolute;
+    width: 360px;
+    height: 800px;
+    background: #00000000;
+    border-radius: 5px;
+    backdrop-filter: blur(2px) opacity(0);
+    transition: 0.5s backdrop-filter ease, 0.5s background ease;
+}
+
+#cover.show{
+    background: #00000080;
+    backdrop-filter: blur(2px) opacity(1);
+}
+
+#header {
+    font-family: "Space Mono";
+    padding: 10px;
+    padding-top: 60px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header div {
+    font-size: 22px;
+    font-family: "Space Mono";
+}
+
+#bigpost .audio-cont {
+    width: 320px;
+}
+
+.audio-cont .audio {
+    display: flex;
+    width: 240px;
+    background: #bfdcfc;
+    padding: 5px;
+    padding-right: 0px;
+    border-radius: 5px;
+    /* float: right; */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.audio-cont .audio.right {
+    background: #ccfcf3;
+    float: right;
+}
+
+
+.audio .play {
+    font-family: "Space Mono";
+    width: 20px;
+}
+
+.audio .slider .slider-button {
+    /* width: 10px; */
+    height: 5px;
+    border-radius: 5px;
+    background-color: #a9aefc;
+    margin-top: 9px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.audio .slider {
+    margin-left: 5px;
+    width: 140px;
+}
+
+.audio .slider .slider-button,
+.audio .slider .slider-track {
+    display: inline-block;
+    position: absolute;
+}
+
+.audio .slider .slider-track {
+    width: 140px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #00000010;
+    margin-top: 9px;
+}
+
+.audio .timestamp {
+    margin-left: 20px;
+    width: 70px;
+}
+
+.audio .timestamp div {
+    font-size: 10px;
+    display: inline-block;
+}
+
+.name{
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#mockup{
+    z-index: 3;
+    position: absolute;
+    left: 471px;
+    height: 860px;
+    /* display: none; */
+    /* width: 360px; */
+}
